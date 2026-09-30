@@ -1,0 +1,8 @@
+/* Botões (.btn) usados em várias seções */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:999px;font-weight:700;font-size:14px;border:1.5px solid transparent;cursor:pointer;transition:transform .25s,background .25s,color .25s}
+.btn:hover{transform:translateY(-3px)}
+.btn svg{transition:transform .25s}
+.btn:hover svg{transform:translate(3px,-3px)}
+.btn-red{background:var(--red);color:#fff}.btn-red:hover{background:var(--yellow);color:var(--bg)}
+.btn-yellow{background:var(--yellow);color:var(--bg)}.btn-yellow:hover{background:var(--cream)}
+.btn-line{border-color:color-mix(in srgb,var(--cream) 50%,transparent)}.btn-line:hover{background:var(--cream);color:var(--bg)}

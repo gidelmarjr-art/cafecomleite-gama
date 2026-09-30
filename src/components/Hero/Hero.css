@@ -1,0 +1,31 @@
+@keyframes rise{from{transform:translateY(105%)}to{transform:none}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes float{50%{transform:translateY(-14px)}}
+@keyframes sunpulse{50%{transform:scale(1.04)}}
+@keyframes steam{0%{stroke-dasharray:0 80;opacity:0;transform:translateY(12px)}40%{opacity:.85}100%{stroke-dasharray:80 0;opacity:0;transform:translateY(-16px)}}
+
+/* Mobile primeiro: xícara em cima, texto centralizado embaixo */
+.hero{min-height:auto;display:grid;grid-template-columns:1fr;justify-items:center;align-items:center;text-align:center;gap:34px;padding:120px var(--pad) 70px;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 20%,var(--glow),var(--bg) 60%)}
+.hero h1{font-size:clamp(52px,7.4vw,118px);line-height:.95}
+.mask{display:block;overflow:hidden;padding-bottom:.08em}
+.mask>span{display:block;animation:rise .9s cubic-bezier(.2,.8,.2,1) both;animation-delay:var(--d,0ms)}
+.hero-description{max-width:470px;margin:30px auto;font-size:17px;color:var(--muted)}
+.hero-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.hero-hours{margin-top:28px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--mint);line-height:1.9}
+.hero-art{position:relative;aspect-ratio:1;width:100%;max-width:300px;order:-1;margin:0 auto;justify-self:center}
+.sun{position:absolute;inset:6%;border-radius:50%;background:var(--red);animation:sunpulse 7s ease-in-out infinite}
+.cup{position:absolute;inset:6%;width:88%;height:88%;animation:float 6s ease-in-out infinite}
+.steam{fill:none;stroke:var(--cream);stroke-width:5;stroke-linecap:round;opacity:.8;stroke-dasharray:80;animation:steam 3.4s ease-in-out infinite}
+.s2{animation-delay:.8s}.s3{animation-delay:1.6s}
+.badge{position:absolute;right:-2%;top:-2%;width:32%;color:var(--yellow);animation:spin 22s linear infinite}
+.badge text{font-family:var(--mono);font-size:15.5px;letter-spacing:.09em;fill:currentColor}
+
+/* Desktop: texto e xícara lado a lado */
+@media (min-width:901px){
+.hero{min-height:100vh;min-height:100svh;grid-template-columns:1.1fr .9fr;justify-items:stretch;text-align:left;gap:4vw;padding:120px var(--pad) 70px}
+.hero>.hero-copy{margin:0;max-width:none}
+.hero>.hero-art{order:0;max-width:520px;margin:0}
+.hero h1{font-size:clamp(48px,6vw,100px)}
+.hero-description{margin-left:0;margin-right:0}
+.hero-actions{justify-content:flex-start}
+}

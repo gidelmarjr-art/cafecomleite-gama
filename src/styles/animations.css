@@ -1,0 +1,9 @@
+/* Animações compartilhadas. As específicas ficam no CSS de cada componente. */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.fade{animation:fadeUp .8s cubic-bezier(.2,.8,.2,1) both;animation-delay:var(--d,0ms)}
+
+@media (prefers-reduced-motion:reduce){
+html{scroll-behavior:auto}
+*,*::before,*::after{animation:none!important;transition:none!important}
+.reveal,.mask>span,.fade{opacity:1!important;transform:none!important}
+}

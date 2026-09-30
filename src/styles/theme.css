@@ -1,0 +1,14 @@
+/* PALETA: ajuste as cores da marca só aqui. */
+:root{
+  --bg:#0f1512;      /* fundo escuro */
+  --bg2:#16201b;     /* fundo escuro alternativo */
+  --glow:#1d2c25;    /* brilho suave do fundo */
+  --cream:#f8f2e9;   /* fundo claro e texto sobre escuro */
+  --paper:#fffdf8;   /* cartões claros */
+  --ink:#183831;     /* texto sobre fundo claro */
+  --red:#df4b35;     /* cor principal de destaque */
+  --yellow:#efbd37;  /* cor secundária de destaque */
+  --mint:#b9dbd8;    /* detalhes e legendas */
+  --muted:#c3cdc7;   /* texto de apoio */
+  --line:rgba(248,242,233,.22);
+}
