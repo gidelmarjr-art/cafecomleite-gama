@@ -1,4 +1,5 @@
 import './Hero.css'
+import logoCup from '../../assets/logo-cup.png'
 import { Link } from 'react-router-dom'
 import { Arrow, Chat } from '../Icons/Icons.jsx'
 import { links, hours } from '../../data/site.js'
@@ -20,16 +21,7 @@ export default function Hero() {
       </div>
       <div className="hero-art" aria-hidden="true">
         <div className="sun" />
-        <svg className="cup" viewBox="0 0 300 300">
-          <path className="steam s1" d="M115 95c-12-16 12-28 0-46" />
-          <path className="steam s2" d="M150 95c-12-16 12-28 0-46" />
-          <path className="steam s3" d="M185 95c-12-16 12-28 0-46" />
-          <path d="M82 118h136v52a68 60 0 0 1-136 0Z" fill="var(--paper)" />
-          <path d="M218 132h14a24 24 0 0 1 0 48h-22" fill="none" stroke="var(--paper)" strokeWidth="12" />
-          <ellipse cx="150" cy="118" rx="68" ry="12" fill="#5a3a2a" />
-          <ellipse cx="150" cy="248" rx="112" ry="16" fill="var(--bg)" opacity=".35" />
-          <ellipse cx="150" cy="238" rx="100" ry="14" fill="var(--yellow)" />
-        </svg>
+        <img className="cup" src={logoCup} alt="" />
         <svg className="badge" viewBox="0 0 200 200">
           <defs><path id="c" d="M100 100m-78 0a78 78 0 1 1 156 0a78 78 0 1 1-156 0" /></defs>
           <text><textPath href="#c">CAFÉ COM LEITE · GAMA · DF · DESDE SEMPRE ·</textPath></text>

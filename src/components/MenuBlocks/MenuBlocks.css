@@ -1,0 +1,81 @@
+/* Estilos que reproduzem o layout do PDF do cardápio (folha branca, fotos coladas, filetes pretos). */
+.sheet em{font-weight:700;font-style:italic;color:inherit}
+.mtitle{font-family:'Lato',var(--sans);font-weight:300;line-height:1.05;margin:0}
+.mtitle.xl{font-size:clamp(34px,5.6vw,64px)}
+.mtitle.lg{font-size:clamp(28px,4.4vw,50px)}
+.mtitle.md{font-size:clamp(22px,3.2vw,34px)}
+.desc{font-size:13.5px;line-height:1.35;color:#222;margin:3px 0 0}
+.price{font-family:'Montserrat',var(--sans);font-weight:700;font-size:15px;color:var(--k);white-space:nowrap}
+.price.stack{display:flex;flex-direction:column;align-items:flex-end;line-height:1.2;text-align:right}
+.mrule{border:0;border-top:1px solid var(--k);margin:0;width:100%}
+.mnote{margin:0;font-size:14.5px}.mnote.right{text-align:right}.mnote.big{font-family:'Lato',var(--sans);font-size:24px;font-weight:300;margin-bottom:6px}
+
+.mhead{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1fr);gap:12px 24px;align-items:center}
+.mhead .aside{border-left:1px solid var(--k);padding-left:20px;font-family:'Lato',var(--sans);font-weight:300;font-size:clamp(16px,2.5vw,27px);margin:0;line-height:1.25}
+.head-items{display:grid;grid-template-columns:1fr 1fr;gap:16px;grid-column:2}
+.head-items strong{font-family:'Lato',var(--sans);font-weight:400;font-size:22px;display:block}
+.mhead .extra{grid-column:2;font-size:14px}
+.mtitle-row{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 18px}
+.mtitle-row .price.right{margin-left:auto}
+.mtitle-row.line::after{content:'';flex:1;min-width:60px;border-top:1px solid var(--k);align-self:center}
+
+.photo{overflow:hidden;background:#eee}
+.photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+.photo:hover img{transform:scale(1.06)}
+.photo.r-wide{aspect-ratio:1.5}.photo.r-tall{aspect-ratio:.9}.photo.r-sq{aspect-ratio:1}.photo.r-portrait{aspect-ratio:.62}.photo.r-brunch{aspect-ratio:.95}
+.photo.natural{background:none}.photo.natural img{height:auto}
+
+.mgallery{display:grid;gap:5px}
+.mcards{display:grid;grid-template-columns:repeat(var(--cols),1fr);gap:16px 6px;align-items:start}
+.mcards.ratio-none{align-items:stretch}
+.mcard-body{padding:11px 0 0 12px;border-left:1px solid var(--k);min-height:64px;display:flex;flex-direction:column;gap:2px;height:100%}
+.mcard:first-child .mcard-body{border-left:0;padding-left:0}
+.mcard h3{font-family:'Lato',var(--sans);font-weight:400;font-size:clamp(17px,2.4vw,25px);line-height:1.12;margin:0}
+.pline{margin:3px 0 0;font-size:13px;display:flex;flex-direction:column}
+.pline b{font-size:15.5px}
+.mcard-body>.price{margin-top:auto;padding-top:8px}
+.mcard-body>.desc+.price,.mcard-body>.pline+.price{padding-top:6px}
+.bullets{list-style:none;padding:0;margin:8px 0 14px;font-size:13.5px;line-height:1.4}
+.bullets li{position:relative;padding-left:12px;margin-bottom:3px}.bullets li::before{content:'·';position:absolute;left:2px;font-weight:700}
+.mcards.ratio-brunch .mcard h3{font-size:clamp(24px,3.6vw,42px);line-height:1}
+.mcards.ratio-brunch .mcard-body{padding-top:14px}
+.mcards.side{align-items:start}
+.mcards.side .mcard{display:grid;grid-template-columns:.8fr 1.2fr;gap:14px}
+.mcards.side .mcard-body{border-left:0;padding:0}
+
+.mlist-items{display:grid;gap:0}
+.mlist-items.cols-2{grid-template-columns:1fr 1fr;gap:0 18px}
+.mlist-items li{display:flex;justify-content:space-between;gap:14px;padding:9px 0;align-items:flex-start}
+.mlist-items strong{font-family:'Lato',var(--sans);font-weight:400;font-size:clamp(16px,2.2vw,22px);line-height:1.15}
+.mlist-items.stack strong,.mlist-items.inline strong{font-size:20px}
+.mlist-items.stack li,.mlist-items.inline li{display:block}
+.mlist-items.stack .price,.mlist-items.inline .price{display:block;margin-top:4px;font-size:12px}
+.mlist-items.inline li{border-left:0}
+
+.msplit{display:grid;grid-template-columns:var(--cols);gap:26px 30px;align-items:start}
+.msplit-col{display:grid;gap:14px;min-width:0}
+.msplit-col+.msplit-col{position:relative}
+
+.badges{display:inline-flex;gap:4px;margin-left:8px;vertical-align:middle}
+.badge-ico{width:26px;height:26px;fill:none;stroke:#2f7d3b;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.badge-ico .slash{stroke-width:1.6}
+
+@media (max-width:820px){
+.mcards{grid-template-columns:repeat(2,1fr)}
+.mcards[style*="--cols: 1"]{grid-template-columns:1fr}
+.msplit{grid-template-columns:1fr!important}
+.mhead{grid-template-columns:1fr}.mhead .aside,.head-items,.mhead .extra{grid-column:1}.mhead .aside{border-left:0;padding-left:0}
+.mgallery[style*="1.5fr"]{grid-template-columns:1fr!important}
+}
+@media (max-width:560px){
+.mcards.ratio-brunch,.mcards[style*="--cols: 3"]{grid-template-columns:1fr}
+.mgallery{grid-template-columns:repeat(2,1fr)!important}
+.mlist-items.cols-2{grid-template-columns:1fr}
+.head-items{grid-template-columns:1fr}
+.mcards.side .mcard{grid-template-columns:1fr}
+}
+
+/* Galerias: fotos lado a lado com a mesma altura (como no PDF) */
+.mgallery .photo{aspect-ratio:auto;height:clamp(170px,26vw,270px)}
+.mgallery .photo.r-tall{height:clamp(210px,31vw,320px)}
+.mgallery .photo.r-sq{height:clamp(210px,31vw,320px)}

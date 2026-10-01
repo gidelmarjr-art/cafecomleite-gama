@@ -1,8 +1,10 @@
-.footer{background:var(--red);color:#fff;padding:60px var(--pad) 30px}
+.footer{background:var(--ink);color:#fff;padding:60px var(--pad) 30px}
 .footer-top{display:flex;flex-direction:column;align-items:center;justify-content:center;flex-wrap:wrap;gap:32px;text-align:center}
-.footer-brand{font-size:38px;margin:0}
+.footer-brand{font-size:30px;margin:0}
+.footer-brand .brand-logo{box-shadow:none}
 .footer-hours li{display:flex;gap:14px;font-size:14px}
 .footer-hours b{font-family:var(--mono);font-weight:500}
 .footer-links{display:flex;gap:20px;align-items:center;font-weight:600}
-.footer p{margin-top:40px;text-align:center;font-family:var(--mono);font-size:11px;letter-spacing:.06em;opacity:.85}
+.footer-links a:hover{color:var(--orange)}
+.footer p{margin-top:40px;text-align:center;font-family:var(--mono);font-size:11px;letter-spacing:.06em;opacity:.8}
 @media (min-width:901px){.footer-top{flex-direction:row;justify-content:space-between;text-align:left}}

@@ -1,21 +1,13 @@
-.menu-page{padding-bottom:80px}
-.menu-hero{padding:120px var(--pad) 60px;text-align:center;background:radial-gradient(circle at 50% 0%,var(--glow),var(--bg) 60%)}
-.menu-title{font-size:clamp(56px,9vw,140px)}
-.menu-hero>p:not(.eyebrow){max-width:520px;margin:26px auto;color:var(--muted);font-size:17px}
+.menu-page{background:#f6efe8;padding-bottom:70px}
+.menu-hero{padding:120px var(--pad) 56px;text-align:center;background:var(--hero-gradient);color:var(--ink)}
+.menu-hero .eyebrow{color:var(--ink)}
+.menu-hero h1 em{color:#fff}
+.menu-title{font-size:clamp(56px,9vw,130px)}
+.menu-hero>p:not(.eyebrow){max-width:520px;margin:26px auto;color:var(--ink);font-size:17px}
 .menu-hero .hero-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
-.menu-tabs{position:sticky;top:68px;z-index:20;display:flex;justify-content:safe center;gap:10px;overflow-x:auto;padding:14px var(--pad);background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid color-mix(in srgb,var(--cream) 15%,transparent)}
-.menu-tabs button{flex:none;font:inherit;font-weight:700;font-size:14px;color:var(--cream);background:none;border:1.5px solid color-mix(in srgb,var(--cream) 35%,transparent);border-radius:999px;padding:9px 20px;cursor:pointer;transition:background .25s,color .25s}
-.menu-tabs button:hover,.menu-tabs button.on{background:var(--yellow);color:var(--bg);border-color:var(--yellow)}
-.menu-block{padding:80px var(--pad) 20px;scroll-margin-top:140px}
-.menu-block-head,.menu-block ul{max-width:900px;margin-left:auto;margin-right:auto}
-.menu-block-head{display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;gap:8px 28px;margin-bottom:24px;text-align:center}
-.menu-block-head h2{margin:0}
-.menu-block-head p{color:var(--mint);font-family:var(--mono);font-size:12px}
-.menu-block li{display:flex;justify-content:space-between;gap:20px;padding:24px 0;text-align:left;border-top:1px solid color-mix(in srgb,var(--cream) 18%,transparent);transition:padding .3s,background .3s}
-.menu-block li:hover{padding-left:16px;background:color-mix(in srgb,var(--cream) 5%,transparent)}
-.menu-block li.reveal.in:hover{transition-delay:0ms}
-.menu-block strong{font-family:var(--serif);font-size:26px;font-weight:600}
-.menu-block small{font-family:var(--mono);font-size:10px;margin-left:10px;padding:3px 8px;border-radius:99px;background:var(--red);vertical-align:middle}
-.menu-block li p{color:var(--muted);margin-top:4px}
-.menu-block b{font-family:var(--mono);color:var(--yellow);white-space:nowrap}
+.menu-hero .btn-red{background:var(--ink)}.menu-hero .btn-red:hover{background:var(--orange)}
+.menu-tabs{position:sticky;top:68px;z-index:20;display:flex;justify-content:safe center;gap:10px;overflow-x:auto;padding:14px var(--pad);margin-bottom:34px;background:color-mix(in srgb,var(--white) 94%,transparent);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line)}
+.menu-tabs button{flex:none;font:inherit;font-weight:700;font-size:14px;color:var(--ink);background:none;border:1.5px solid color-mix(in srgb,var(--ink) 30%,transparent);border-radius:999px;padding:9px 20px;cursor:pointer;transition:background .25s,color .25s,border-color .25s}
+.menu-tabs button:hover,.menu-tabs button.on{background:var(--orange);color:#fff;border-color:var(--orange)}
 @media (min-width:901px){.menu-hero{padding-top:170px}.menu-tabs{top:76px}}
+@media (max-width:700px){.menu-tabs{margin-bottom:16px}}

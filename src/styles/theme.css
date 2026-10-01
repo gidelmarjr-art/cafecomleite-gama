@@ -1,14 +1,10 @@
-/* PALETA: ajuste as cores da marca só aqui. */
+/* PALETA DA MARCA (logo): laranja #eb6919 e branco #ffffff. Ajuste só aqui. */
 :root{
-  --bg:#0f1512;      /* fundo escuro */
-  --bg2:#16201b;     /* fundo escuro alternativo */
-  --glow:#1d2c25;    /* brilho suave do fundo */
-  --cream:#f8f2e9;   /* fundo claro e texto sobre escuro */
-  --paper:#fffdf8;   /* cartões claros */
-  --ink:#183831;     /* texto sobre fundo claro */
-  --red:#df4b35;     /* cor principal de destaque */
-  --yellow:#efbd37;  /* cor secundária de destaque */
-  --mint:#b9dbd8;    /* detalhes e legendas */
-  --muted:#c3cdc7;   /* texto de apoio */
-  --line:rgba(248,242,233,.22);
+  --orange:#eb6919;                 /* cor principal da logo */
+  --white:#ffffff;                  /* branco da logo */
+  --tint:#fff3ea;                   /* laranja bem clarinho, para alternar seções */
+  --ink:#1b1410;                    /* texto (marrom quase preto) */
+  --muted:#6b5a4e;                  /* texto de apoio */
+  --line:rgba(27,20,16,.16);        /* filetes */
+  --hero-gradient:linear-gradient(180deg,#eb6919 0%,#ffffff 100%); /* de cima para baixo */
 }

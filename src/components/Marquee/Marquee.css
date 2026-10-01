@@ -1,6 +1,6 @@
 @keyframes slide{to{transform:translateX(-50%)}}
 @keyframes slideRev{from{transform:translateX(-50%)}to{transform:none}}
-.marquee{overflow:hidden;background:var(--yellow);color:var(--bg);font-family:var(--mono);font-size:14px;letter-spacing:.08em;white-space:nowrap;padding:18px 0}
-.marquee.rev{background:var(--red);color:#fff}
+.marquee{overflow:hidden;background:var(--orange);color:#fff;font-family:var(--mono);font-size:14px;letter-spacing:.08em;white-space:nowrap;padding:18px 0}
+.marquee.rev{background:var(--white);color:var(--orange);border-block:1px solid var(--orange)}
 .track{display:flex;width:max-content;animation:slide 28s linear infinite}
 .marquee.rev .track{animation:slideRev 32s linear infinite}

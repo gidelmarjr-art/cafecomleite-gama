@@ -1,40 +1,35 @@
-import React from 'react';
-import { menuSections } from '../../data/cardapio';
-import './MenuPagePDF.css';
+import './MenuPage.css'
+import { useState } from 'react'
+import MenuSheet from '../../components/MenuSheet/MenuSheet.jsx'
+import { Arrow, Chat } from '../../components/Icons/Icons.jsx'
+import { menuPages } from '../../data/menu.js'
+import { links } from '../../data/site.js'
 
-export const CardapioPage = () => {
+export default function MenuPage() {
+  const [active, setActive] = useState(menuPages[0].id)
+  const go = (id) => {
+    setActive(id)
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
   return (
-    <div className="menu-pdf-container">
-      {/* Cabeçalho do Cardápio Físico */}
-      <div className="menu-pdf-header">
-        <h1>CAFÉ COM LEITE</h1>
-        <p>Criando laços e memórias através do sabor. Desde 2019.</p>
-      </div>
-
-      {/* Renderização das Seções do Cardápio */}
-      {menuSections.map((section) => (
-        <div key={section.id} className="menu-pdf-section">
-          <h2>{section.titulo}</h2>
-          {section.subtitulo && <p className="section-sub">{section.subtitulo}</p>}
-          
-          <div className="menu-pdf-grid">
-            {section.itens.map((item, index) => (
-              <div key={index} className="menu-pdf-item">
-                <div>
-                  <div className="item-top">
-                    <h3>{item.nome}</h3>
-                    {item.preco && <span className="price">{item.preco}</span>}
-                  </div>
-                  {item.desc && <p className="item-desc">{item.desc}</p>}
-                </div>
-                {item.detalhe && <span className="item-detalhe">{item.detalhe}</span>}
-              </div>
-            ))}
-          </div>
+    <div className="menu-page">
+      <header className="menu-hero">
+        <p className="eyebrow fade">CARDÁPIO</p>
+        <h1 className="menu-title fade" style={{ '--d': '120ms' }}>O que tem <em>hoje.</em></h1>
+        <p className="fade" style={{ '--d': '240ms' }}>Cafés especiais, brunch, cozinha afetiva e doces. Escolha uma seção ou peça pelo WhatsApp.</p>
+        <div className="hero-actions fade" style={{ '--d': '360ms' }}>
+          <a className="btn btn-red" href="/cardapio-cafe-com-leite.pdf" download>Baixar PDF <Arrow size={18} /></a>
+          <a className="btn btn-line" href={links.whatsapp} target="_blank" rel="noreferrer"><Chat size={18} /> Pedir no WhatsApp</a>
         </div>
-      ))}
+      </header>
+      <nav className="menu-tabs" aria-label="Seções do cardápio">
+        {menuPages.map((p) => (
+          <button key={p.id} type="button" aria-pressed={active === p.id} className={active === p.id ? 'on' : ''} onClick={() => go(p.id)}>{p.tab}</button>
+        ))}
+      </nav>
+      <div className="menu-sheets">
+        {menuPages.map((p) => <MenuSheet key={p.id} id={p.id} blocks={p.blocks} />)}
+      </div>
     </div>
-  );
-};
-
-export default CardapioPage;
+  )
+}

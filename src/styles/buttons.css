@@ -3,6 +3,5 @@
 .btn:hover{transform:translateY(-3px)}
 .btn svg{transition:transform .25s}
 .btn:hover svg{transform:translate(3px,-3px)}
-.btn-red{background:var(--red);color:#fff}.btn-red:hover{background:var(--yellow);color:var(--bg)}
-.btn-yellow{background:var(--yellow);color:var(--bg)}.btn-yellow:hover{background:var(--cream)}
-.btn-line{border-color:color-mix(in srgb,var(--cream) 50%,transparent)}.btn-line:hover{background:var(--cream);color:var(--bg)}
+.btn-red{background:var(--orange);color:#fff}.btn-red:hover{background:var(--ink)}
+.btn-line{border-color:color-mix(in srgb,var(--ink) 45%,transparent);color:var(--ink)}.btn-line:hover{background:var(--ink);color:#fff}

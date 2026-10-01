@@ -2,18 +2,20 @@
 :root{--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif;--mono:'DM Mono',monospace;--pad:5.5vw}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:80px}
-body{margin:0;background:var(--bg);color:var(--cream);font-family:var(--sans);line-height:1.55;overflow-x:hidden}
+body{margin:0;background:var(--white);color:var(--ink);font-family:var(--sans);line-height:1.55;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 ul{list-style:none;margin:0;padding:0}
 h1,h2,h3{font-family:var(--serif);font-weight:600;margin:0;line-height:.95}
-h1 em,h2 em{font-weight:500;color:var(--yellow)}
+h1 em,h2 em{font-weight:500;color:var(--orange)}
 p{margin:0}
-:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
-.eyebrow{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.12em;margin-bottom:22px;color:var(--mint)}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+.eyebrow{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.12em;margin-bottom:22px;color:var(--orange)}
 
 /* Logo (usada no Header e no Footer) */
-.brand{display:flex;align-items:baseline;font-family:var(--serif);font-size:24px;font-weight:700;margin-right:auto;position:relative;z-index:3}
-.brand i{font-size:.6em;margin:0 .3em;color:var(--yellow)}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-size:24px;font-weight:700;margin-right:auto;position:relative;z-index:3}
+.brand-text{display:flex;align-items:baseline}
+.brand-logo{width:40px;height:40px;border-radius:11px;box-shadow:0 0 0 2px var(--white);flex:none}
+.brand i{font-size:.6em;margin:0 .3em;color:var(--orange)}
 
 /* Seções: espaçamento e conteúdo centralizado */
 section{padding:110px var(--pad)}
