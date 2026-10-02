@@ -3,12 +3,18 @@ import Reveal from '../Reveal/Reveal.jsx'
 import { Arrow, Chat, Sparkles } from '../Icons/Icons.jsx'
 import { links } from '../../data/site.js'
 
+// Importação correta dos assets para o Vite empacotar e funcionar no Vercel
+import croissantImg from '../../assets/menu/croissants.webp'
+import matchaImg from '../../assets/menu/matcha-latte.webp'
+import panquecaImg from '../../assets/menu/panqueca-americanas.webp'
+import waffleImg from '../../assets/menu/waffles-com-sorvete.webp'
+
 export default function Contact() {
   const showcasePhotos = [
-    { src: '/src/assets/menu/croissants.webp', title: 'Croissants Recheados' },
-    { src: '/src/assets/menu/matcha-latte.webp', title: 'Matcha Latte' },
-    { src: '/src/assets/menu/panqueca-americanas.webp', title: 'Panquecas' },
-    { src: '/src/assets/menu/waffles-com-sorvete.webp', title: 'Waffles com Sorvete' },
+    { src: croissantImg, title: 'Croissants Recheados' },
+    { src: matchaImg, title: 'Matcha Latte' },
+    { src: panquecaImg, title: 'Panquecas' },
+    { src: waffleImg, title: 'Waffles com Sorvete' },
   ]
 
   return (
