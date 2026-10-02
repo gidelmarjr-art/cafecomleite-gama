@@ -173,7 +173,7 @@
 .badge text {
   font-family: var(--mono);
   font-size: 9.5px;
-  fill: currentColor;
+  fill: #ffff;
 }
 
 @media (min-width: 901px) {
