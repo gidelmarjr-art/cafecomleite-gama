@@ -99,7 +99,7 @@ export default function Block({ b }) {
     case 'cards': return <Cards b={b} />
     case 'gallery':
       return (
-        <div className="mgallery" style={{ gridTemplateColumns: typeof b.cols === 'number' ? `repeat(${b.cols},1fr)` : b.cols }}>
+        <div className="mgallery" data-n={b.items.length} style={{ gridTemplateColumns: typeof b.cols === 'number' ? `repeat(${b.cols},1fr)` : b.cols }}>
           {b.items.map((it) => <Photo key={it.img} name={it.img} alt={it.alt} ratio={b.ratio} />)}
         </div>
       )

@@ -79,3 +79,8 @@
 .mgallery .photo{aspect-ratio:auto;height:clamp(170px,26vw,270px)}
 .mgallery .photo.r-tall{height:clamp(210px,31vw,320px)}
 .mgallery .photo.r-sq{height:clamp(210px,31vw,320px)}
+
+/* Responsividade: galeria de 3 fotos continua em 3 colunas; cartões em 2 colunas alinham a borda à esquerda */
+@media (max-width:560px){.mgallery[data-n="3"]{grid-template-columns:repeat(3,1fr)!important}.mgallery[data-n="3"] .photo{height:clamp(110px,30vw,150px)}}
+@media (max-width:820px){.mcards:not([style*="--cols: 1"]) .mcard:nth-child(odd) .mcard-body{border-left:0;padding-left:0}}
+@media (max-width:560px){.mcards.ratio-brunch .mcard-body,.mcards[style*="--cols: 3"] .mcard-body{border-left:0;padding-left:0}}
