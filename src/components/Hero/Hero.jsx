@@ -4,14 +4,24 @@ import { Link } from 'react-router-dom'
 import { Arrow, Chat } from '../Icons/Icons.jsx'
 import { links, hours } from '../../data/site.js'
 
-const lines = ['Todo encontro', 'começa com', 'café.']
+// Linhas ajustadas para que "começa com café." fique agrupado na segunda linha
+const lines = ['Todo encontro', 'começa com <em>café.</em>']
 
 export default function Hero() {
   return (
     <section className="hero" id="inicio">
       <div className="hero-copy">
         <p className="eyebrow fade" style={{ '--d': '100ms' }}>CAFETERIA & BISTRÔ · GAMA, DF</p>
-        <h1>{lines.map((l, i) => <span className="mask" key={l}><span style={{ '--d': `${200 + i * 140}ms` }}>{i === 2 ? <em>{l}</em> : l}</span></span>)}</h1>
+        <h1>
+          {lines.map((l, i) => (
+            <span className="mask" key={i}>
+              <span 
+                style={{ '--d': `${200 + i * 140}ms` }} 
+                dangerouslySetInnerHTML={{ __html: l }} 
+              />
+            </span>
+          ))}
+        </h1>
         <p className="hero-description fade" style={{ '--d': '700ms' }}>Cafés especiais, cozinha afetiva e uma mesa esperando por você. Cardápio, horários e pedidos num só lugar.</p>
         <div className="hero-actions fade" style={{ '--d': '850ms' }}>
           <Link to="/cardapio" className="btn btn-red">Ver cardápio <Arrow size={18} /></Link>
