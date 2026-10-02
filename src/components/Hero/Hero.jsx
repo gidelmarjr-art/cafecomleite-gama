@@ -17,7 +17,25 @@ export default function Hero() {
           <Link to="/cardapio" className="btn btn-red">Ver cardápio <Arrow size={18} /></Link>
           <a href={links.whatsapp} target="_blank" rel="noreferrer" className="btn btn-line"><Chat size={18} /> Pedir pelo WhatsApp</a>
         </div>
-        <p className="hero-hours fade" style={{ '--d': '1000ms' }}>{hours.map((h) => `${h.label} ${h.time}`).join('  ·  ')}</p>
+        
+        {/* Bloco de Horários com quebra a partir do Domingo */}
+        <div className="hero-hours-card fade" style={{ '--d': '1000ms' }}>
+          <span className="hero-hours-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </span>
+          <div className="hero-hours-content">
+            <span className="hero-hours-title">Horário de Funcionamento</span>
+            <span className="hero-hours-text">
+              {hours[0]?.label}: {hours[0]?.time} 
+              <br />
+              {hours[1]?.label}: {hours[1]?.time}
+            </span>
+          </div>
+        </div>
+
       </div>
       <div className="hero-art" aria-hidden="true">
         <div className="sun" />

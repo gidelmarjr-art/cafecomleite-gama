@@ -1,30 +1,208 @@
-@keyframes rise{from{transform:translateY(105%)}to{transform:none}}
-@keyframes spin{to{transform:rotate(360deg)}}
-@keyframes float{50%{transform:translateY(-14px)}}
-@keyframes sunpulse{50%{transform:scale(1.04)}}
+@keyframes rise {
+  from { transform: translateY(105%); }
+  to { transform: none; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes float {
+  50% { transform: translateY(-14px); }
+}
+
+@keyframes sunpulse {
+  50% { transform: scale(1.04); }
+}
 
 /* Abertura com degradê laranja → branco (de cima para baixo). Direção em theme.css (--hero-gradient). */
-.hero{min-height:auto;display:grid;grid-template-columns:1fr;justify-items:center;align-items:center;text-align:center;gap:34px;padding:120px var(--pad) 70px;position:relative;overflow:hidden;background:var(--hero-gradient);color:var(--ink)}
-.hero .eyebrow{color:var(--ink)}
-.hero h1{font-size:clamp(52px,7.4vw,118px);line-height:.95}
-.hero h1 em{color:#fff}
-.mask{display:block;overflow:hidden;padding-bottom:.08em}
-.mask>span{display:block;animation:rise .9s cubic-bezier(.2,.8,.2,1) both;animation-delay:var(--d,0ms)}
-.hero-description{max-width:470px;margin:30px auto;font-size:17px;color:var(--ink)}
-.hero-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
-.hero .btn-red{background:var(--ink)}.hero .btn-red:hover{background:var(--orange)}
-.hero-hours{margin-top:28px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--ink);line-height:1.9}
-.hero-art{position:relative;aspect-ratio:1;width:100%;max-width:300px;order:-1;margin:0 auto;justify-self:center}
-.sun{position:absolute;inset:9%;border-radius:50%;background:#fff;box-shadow:0 30px 60px color-mix(in srgb,var(--ink) 18%,transparent);animation:sunpulse 7s ease-in-out infinite}
-.cup{position:absolute;left:23%;top:33.4%;width:54%;height:auto;animation:float 6s ease-in-out infinite}
-.badge{position:absolute;inset:0;width:100%;height:100%;color:var(--ink);animation:spin 28s linear infinite}
-.badge text{font-family:var(--mono);font-size:9.5px;fill:currentColor}
+.hero {
+  min-height: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  gap: 34px;
+  padding: 120px var(--pad) 70px;
+  position: relative;
+  overflow: hidden;
+  background: var(--hero-gradient);
+  color: var(--ink);
+}
 
-@media (min-width:901px){
-.hero{min-height:100vh;min-height:100svh;grid-template-columns:1.1fr .9fr;justify-items:stretch;text-align:left;gap:4vw;padding:120px var(--pad) 70px}
-.hero>.hero-copy{margin:0 0 0 clamp(20px,5vw,96px);max-width:none}
-.hero>.hero-art{order:0;max-width:520px;margin:0}
-.hero h1{font-size:clamp(48px,6vw,100px)}
-.hero-description{margin-left:0;margin-right:0}
-.hero-actions{justify-content:flex-start}
+.hero .eyebrow {
+  color: var(--ink);
+}
+
+.hero h1 {
+  font-size: clamp(52px, 7.4vw, 118px);
+  line-height: .95;
+}
+
+.hero h1 em {
+  color: #fff;
+}
+
+.mask {
+  display: block;
+  overflow: hidden;
+  padding-bottom: .08em;
+}
+
+.mask > span {
+  display: block;
+  animation: rise .9s cubic-bezier(.2, .8, .2, 1) both;
+  animation-delay: var(--d, 0ms);
+}
+
+.hero-description {
+  max-width: 470px;
+  margin: 30px auto;
+  font-size: 17px;
+  color: var(--ink);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.hero .btn-red {
+  background: var(--ink);
+}
+
+.hero .btn-red:hover {
+  background: var(--orange);
+}
+
+/* Bloco de Horários de Funcionamento em Destaque */
+.hero-hours-card {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 28px;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  font-family: var(--mono);
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  max-width: 100%;
+  text-align: left;
+}
+
+.hero-hours-icon {
+  display: flex;
+  align-items: center;
+  color: var(--orange);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.hero-hours-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.hero-hours-title {
+  font-weight: 700;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  margin-bottom: 2px;
+}
+
+.hero-hours-text {
+  font-weight: 600;
+  white-space: normal; /* Permite a quebra natural de linha */
+  line-height: 1.5;
+}
+
+.hero-art {
+  position: relative;
+  aspect-ratio: 1;
+  width: 100%;
+  max-width: 300px;
+  order: -1;
+  margin: 0 auto;
+  justify-self: center;
+}
+
+.sun {
+  position: absolute;
+  inset: 9%;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 30px 60px color-mix(in srgb, var(--ink) 18%, transparent);
+  animation: sunpulse 7s ease-in-out infinite;
+}
+
+.cup {
+  position: absolute;
+  left: 23%;
+  top: 33.4%;
+  width: 54%;
+  height: auto;
+  animation: float 6s ease-in-out infinite;
+}
+
+.badge {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--ink);
+  animation: spin 28s linear infinite;
+}
+
+.badge text {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  fill: currentColor;
+}
+
+@media (min-width: 901px) {
+  .hero {
+    min-height: 100vh;
+    min-height: 100svh;
+    grid-template-columns: 1.1fr .9fr;
+    justify-items: stretch;
+    text-align: left;
+    gap: 4vw;
+    padding: 120px var(--pad) 70px;
+  }
+
+  .hero > .hero-copy {
+    margin: 0 0 0 clamp(20px, 5vw, 96px);
+    max-width: none;
+  }
+
+  .hero > .hero-art {
+    order: 0;
+    max-width: 520px;
+    margin: 0;
+  }
+
+  .hero h1 {
+    font-size: clamp(48px, 6vw, 100px);
+  }
+
+  .hero-description {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .hero-actions {
+    justify-content: flex-start;
+  }
 }

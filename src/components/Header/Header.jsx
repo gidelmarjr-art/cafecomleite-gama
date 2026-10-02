@@ -5,7 +5,6 @@ import { links } from '../../data/site.js'
 import { isOpenNow } from '../../utils/hours.js'
 import logoIcon from '../../assets/logo-icon.png'
 
-// Lista completa de navegação solicitada
 const navItems = [
   ['A casa', '/#casa'],
   ['Cardápio', '/cardapio'],
@@ -22,7 +21,7 @@ export default function Header() {
   const [aberto, setAberto] = useState(isOpenNow())
 
   useEffect(() => {
-    const on = () => setScrolled(window.scrollY > 40)
+    const on = () => setScrolled(window.scrollY > 30)
     on()
     window.addEventListener('scroll', on, { passive: true })
     const id = setInterval(() => setAberto(isOpenNow()), 60000)
