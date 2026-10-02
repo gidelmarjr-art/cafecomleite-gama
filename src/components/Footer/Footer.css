@@ -1,10 +1,21 @@
-.footer{background:var(--ink);color:#fff;padding:60px var(--pad) 30px}
-.footer-top{display:flex;flex-direction:column;align-items:center;justify-content:center;flex-wrap:wrap;gap:32px;text-align:center}
-.footer-brand{font-size:30px;margin:0}
+.footer{background:var(--ink);color:#fff;padding:72px var(--pad) 30px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1.1fr 1.3fr;gap:40px;max-width:1200px;margin:0 auto}
+.footer-brand{font-size:26px;margin:0 0 18px}
 .footer-brand .brand-logo{box-shadow:none}
-.footer-hours li{display:flex;gap:14px;font-size:14px}
-.footer-hours b{font-family:var(--mono);font-weight:500}
-.footer-links{display:flex;gap:20px;align-items:center;font-weight:600}
-.footer-links a:hover{color:var(--orange)}
-.footer p{margin-top:40px;text-align:center;font-family:var(--mono);font-size:11px;letter-spacing:.06em;opacity:.8}
-@media (min-width:901px){.footer-top{flex-direction:row;justify-content:space-between;text-align:left}}
+.footer-about p{max-width:340px;font-size:14px;color:color-mix(in srgb,#fff 65%,transparent)}
+.footer-social{display:flex;gap:18px;margin-top:22px}
+.footer-social a{color:color-mix(in srgb,#fff 65%,transparent);transition:color .2s,transform .2s}
+.footer-social a:hover{color:var(--orange);transform:translateY(-2px)}
+.footer h4{font-family:var(--sans);font-size:15px;font-weight:700;line-height:1.2;margin-bottom:16px}
+.footer-h-sub{margin-top:26px}
+.footer li{margin-bottom:11px;font-size:14px;font-weight:500}
+.footer li a{color:color-mix(in srgb,#fff 65%,transparent);transition:color .2s}
+.footer li a:hover{color:var(--orange)}
+.footer-hours li{display:flex;flex-direction:column;color:color-mix(in srgb,#fff 65%,transparent);margin-bottom:8px}
+.footer-hours b{font-family:var(--mono);font-weight:500;font-size:12px;color:#fff}
+.footer-bottom{display:flex;flex-direction:column;gap:12px;max-width:1200px;margin:52px auto 0;padding-top:24px;border-top:1px solid color-mix(in srgb,#fff 14%,transparent);font-size:13px;color:color-mix(in srgb,#fff 65%,transparent)}
+.footer-bottom div{display:flex;flex-wrap:wrap;gap:18px}
+.footer-bottom a:hover{color:var(--orange)}
+@media (min-width:700px){.footer-bottom{flex-direction:row;justify-content:space-between;align-items:center}}
+@media (max-width:900px){.footer-grid{grid-template-columns:1fr 1fr;gap:34px 24px}.footer-about{grid-column:1/-1}}
+@media (max-width:480px){.footer-grid{grid-template-columns:1fr}}

@@ -15,14 +15,14 @@
 .hero .btn-red{background:var(--ink)}.hero .btn-red:hover{background:var(--orange)}
 .hero-hours{margin-top:28px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--ink);line-height:1.9}
 .hero-art{position:relative;aspect-ratio:1;width:100%;max-width:300px;order:-1;margin:0 auto;justify-self:center}
-.sun{position:absolute;inset:6%;border-radius:50%;background:#fff;box-shadow:0 30px 60px color-mix(in srgb,var(--ink) 18%,transparent);animation:sunpulse 7s ease-in-out infinite}
-.cup{position:absolute;left:20%;top:32%;width:60%;height:auto;animation:float 6s ease-in-out infinite}
-.badge{position:absolute;right:-7%;top:-7%;width:30%;color:var(--ink);animation:spin 22s linear infinite}
-.badge text{font-family:var(--mono);font-size:15.5px;letter-spacing:.09em;fill:currentColor}
+.sun{position:absolute;inset:9%;border-radius:50%;background:#fff;box-shadow:0 30px 60px color-mix(in srgb,var(--ink) 18%,transparent);animation:sunpulse 7s ease-in-out infinite}
+.cup{position:absolute;left:23%;top:33.4%;width:54%;height:auto;animation:float 6s ease-in-out infinite}
+.badge{position:absolute;inset:0;width:100%;height:100%;color:var(--ink);animation:spin 28s linear infinite}
+.badge text{font-family:var(--mono);font-size:9.5px;fill:currentColor}
 
 @media (min-width:901px){
 .hero{min-height:100vh;min-height:100svh;grid-template-columns:1.1fr .9fr;justify-items:stretch;text-align:left;gap:4vw;padding:120px var(--pad) 70px}
-.hero>.hero-copy{margin:0;max-width:none}
+.hero>.hero-copy{margin:0 0 0 clamp(20px,5vw,96px);max-width:none}
 .hero>.hero-art{order:0;max-width:520px;margin:0}
 .hero h1{font-size:clamp(48px,6vw,100px)}
 .hero-description{margin-left:0;margin-right:0}

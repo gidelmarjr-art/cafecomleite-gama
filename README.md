@@ -6,7 +6,7 @@ React + Vite + React Router. Rodar: `npm install && npm run dev`. Build: `npm ru
 - `src/components/<Nome>/<Nome>.jsx` + `<Nome>.css`: cada componente com seu CSS.
 - `src/pages/Home` e `src/pages/MenuPage` (página /cardapio).
 - `src/styles/`: `theme.css` (cores da marca: laranja #eb6919 e branco; direção do degradê do início em --hero-gradient), `global.css`, `buttons.css`, `animations.css`.
-- `src/data/site.js`: horários, links, unidade, textos. `src/data/menu.js`: CARDÁPIO.
+- `src/data/site.js`: horários, links, unidade, textos. `src/data/faq.js`: perguntas do FAQ. `src/data/menu.js`: CARDÁPIO.
 
 ## Cardápio (refeito do PDF)
 - Edite tudo em `src/data/menu.js`: cada página do PDF é uma "folha" feita de blocos

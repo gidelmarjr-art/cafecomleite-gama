@@ -36,3 +36,5 @@ export const events = [
   { name: 'Datas especiais', desc: 'Atividades e pintura de rosto no Dia das Crianças.' },
   { name: 'Jornal do dia', desc: 'As edições do dia esperam por você na casa.' },
 ]
+
+export const contact = { phone: '(61) 99405-3053', email: 'cafecomleitegama@gmail.com' }

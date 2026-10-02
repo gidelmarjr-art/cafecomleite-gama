@@ -23,8 +23,8 @@ export default function Hero() {
         <div className="sun" />
         <img className="cup" src={logoCup} alt="" />
         <svg className="badge" viewBox="0 0 200 200">
-          <defs><path id="c" d="M100 100m-78 0a78 78 0 1 1 156 0a78 78 0 1 1-156 0" /></defs>
-          <text><textPath href="#c">CAFÉ COM LEITE · GAMA · DF · DESDE SEMPRE ·</textPath></text>
+          <defs><path id="ring" d="M100 100m-91 0a91 91 0 1 1 182 0a91 91 0 1 1-182 0" /></defs>
+          <text><textPath href="#ring" textLength="562" lengthAdjust="spacing">CAFÉ COM LEITE · GAMA · DF · DESDE SEMPRE · </textPath></text>
         </svg>
       </div>
     </section>
