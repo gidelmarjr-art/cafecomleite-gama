@@ -2,7 +2,7 @@ export const links = {
   whatsapp: 'https://wa.me/5561994053053',
   instagram: 'https://www.instagram.com/cafecomleite_gama/',
   linktree: 'https://linktr.ee/cafecomleite_gama',
-  maps: 'https://maps.app.goo.gl/mJ4rnd9W4FaCMSj16',
+  maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15340.61925987411!2d-48.06152509227822!3d-16.00545441342025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9359810afdf7cf8d%3A0xd3744e8a70b10141!2sCaf%C3%A9%20com%20Leite!5e0!3m2!1spt-BR!2sbr!4v1790907772774!5m2!1spt-BR!2sbr',
   menuDrive: 'https://drive.google.com/drive/folders/1Amp8BRweM89YmcjUG79jevpCQPWoZ4bc',
   ifood: 'https://www.ifood.com.br/delivery/brasilia-df/cafe-com-leite-setor-norte-gama/d30cbd46-78aa-4365-824d-50abf1786b15',
   interview: 'https://youtu.be/Wo4RmEKgyQk?si=GMjAdAy_dmTtmry3',
@@ -15,8 +15,13 @@ export const hours = [
 
 // Apenas a unidade já aberta. Quando a segunda abrir, adicione outro item aqui.
 export const units = [
-  { number: '01', title: 'Setor Norte', address: 'SNO, Quadra 01, Conjunto H, nº 219 · Gama, DF', map: 'https://www.google.com/maps/search/?api=1&query=SNO+quadra+01+conjunto+H+219+Gama+DF', embed: 'https://maps.google.com/maps?q=SNO+quadra+01+conjunto+H+219+Gama+DF&z=17&output=embed' },
-]
+  {
+    title: "Café com Leite",
+    address: "Endereço completo aqui...",
+    embed: "https://www.google.com/maps/embed?...", // (Este é o do mapa visual que você mandou antes)
+    map: "https://maps.app.goo.gl/mnqzx85j61ygidwSA" // <--- É ESTE LINK QUE ABRE NO BOTÃO "COMO CHEGAR"
+  }
+];
 
 export const stats = [
   { value: 5, suffix: '+', label: 'anos de história' },
