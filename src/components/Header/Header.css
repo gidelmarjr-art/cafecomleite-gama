@@ -17,7 +17,7 @@
   /* Fundo sólido desde o topo para máxima legibilidade */
   background: var(--white);
   border-bottom: 1px solid var(--line);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 2px 10px rgba(95, 71, 71, 0.04);
   transition: background .3s, border-color .3s, box-shadow .3s;
 }
 
@@ -73,6 +73,7 @@
 
 .nav-cta:hover {
   background: var(--ink);
+  color: #fff;
 }
 
 .status {
