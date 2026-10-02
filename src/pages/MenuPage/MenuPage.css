@@ -1,4 +1,4 @@
-.menu-page{background:#f6efe8;padding-bottom:70px}
+.menu-page{background:#f6efe8;padding-bottom:120px}
 .menu-hero{padding:120px var(--pad) 56px;text-align:center;background:var(--hero-gradient);color:var(--ink)}
 .menu-hero .eyebrow{color:var(--ink)}
 .menu-hero h1 em{color:#fff}
@@ -12,5 +12,8 @@
 @media (min-width:901px){.menu-hero{padding-top:170px}.menu-tabs{top:76px}}
 @media (max-width:700px){.menu-tabs{margin-bottom:16px}}
 
-.menu-pager{display:grid;justify-items:center;gap:10px;margin-top:34px;padding:0 var(--pad)}
-.menu-pager-caption{font-size:13px;color:var(--muted)}
+
+/* Barra de páginas flutuante: fica fixa na parte de baixo enquanto o cardápio está na tela */
+.menu-pager-float{position:fixed;left:50%;bottom:calc(16px + env(safe-area-inset-bottom));z-index:30;max-width:calc(100vw - 20px);padding:6px 8px;border:1px solid var(--line);border-radius:20px;background:color-mix(in srgb,var(--white) 90%,transparent);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:0 12px 36px color-mix(in srgb,var(--ink) 22%,transparent);opacity:0;visibility:hidden;transform:translate(-50%,24px);transition:opacity .3s,transform .4s cubic-bezier(.2,.8,.2,1),visibility 0s .4s}
+.menu-pager-float.show{opacity:1;visibility:visible;transform:translate(-50%,0);transition-delay:0s}
+@media (max-width:520px){.menu-pager-float{bottom:calc(10px + env(safe-area-inset-bottom));padding:4px 6px}}
