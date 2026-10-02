@@ -5,6 +5,7 @@ import Footer from './components/Footer/Footer.jsx'
 import ScrollProgress from './components/ScrollProgress/ScrollProgress.jsx'
 import Home from './pages/Home/Home.jsx'
 import MenuPage from './pages/MenuPage/MenuPage.jsx'
+import Testimonials from './components/Testimonials/Testimonials.jsx'
 
 function ScrollManager() {
   const { pathname, hash } = useLocation()
@@ -26,6 +27,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/cardapio" element={<MenuPage />} />
           <Route path="*" element={<Home />} />
+          <Route path="/avaliacoes" element={<Testimonials />} />
         </Routes>
       </main>
       <Footer />
