@@ -97,7 +97,7 @@
 
     .stats span {
         font-family: var(--mono);
-        font-size: 9px;
+        font-size: 12px;
         letter-spacing: .08em;
         text-transform: uppercase;
     }
